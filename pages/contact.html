@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,3 +22,56 @@
         </ul>
       </nav>
   </header>
+  <main>
+    <div>
+
+      <em>Cette fonctionaliser n'ai pas en encore en fonction veuillez nous excuser pour la géne occasionée</em>
+
+      <form action="contact.php" method="post">
+        <h2>Formulaire de contact</h2>
+
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" placeholder="Nom" name="nom" required>
+
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" placeholder="Prénom" name="prenom" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email@exemple.com" name="email" required>
+
+        <label for="tel">Numéro de téléphone</label>
+        <input type="tel" id="tel" placeholder="06 00 00 00 00" name="tel">
+
+        <label for="category">Catégorie du renseigenement</label>
+        <select name="category" id="category">
+          <option value="default">Inscription</option>
+          <option value="aide">Aide</option>
+          <option value="pro-contact">Contact professionnel</option>
+        </select>
+
+        <label for="message">Votre message</label>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+
+        <button>Envoyer</button>
+
+        <div>
+          <p>Souhaitez-vous recevoir nos news ?</p>
+          <input type="radio" id="oui" name="news-question" value="oui" checked>
+          <label for="oui">Oui</label>
+          <input type="radio" id="non" name="news-question" value="non">
+          <label for="non">Non</label>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+
+
+
+
+  <footer>
+
+  </footer>
+</body>
+</html>
