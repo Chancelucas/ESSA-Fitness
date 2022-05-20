@@ -1,4 +1,174 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  
 }
+
+body { 
+  background-color: rgb(238, 238, 238);
+}
+
+.navbar { 
+  background-color: rgb(48, 56, 65);
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .logo { 
+    /*definir la taille du logo*/
+  
+  }
+
+  input { 
+    display: none;
+  }
+
+  .nav-menu{
+    display: none;
+    position: absolute;
+    background-color: rgb(58, 71, 80);
+    list-style: none;
+    text-align: end;
+    padding: 20px;
+    right: 0;
+    height: 100vh;
+    width: 240px;
+
+
+    a{
+      color: rgb(238, 238, 238) ;
+      text-decoration: none;
+      line-height: 3em;
+      border: 30px;
+      font-size: 16px;
+    }
+  }
+  
+  #btn:checked + ul{
+    display: block;
+    top: 80px;
+    
+  }
+
+  .icon { 
+    fill: rgb(238, 238, 238);
+    cursor: pointer;
+
+  }
+
+  .icon:hover{
+    
+    fill: rgb(246, 201, 14);
+    transition: all .3s;
+  }
+
+  .nav-a:hover{
+    background-color: rgb(48, 56, 65);
+    border: solid rgb(48, 56, 65) ;
+    color: rgb(246, 201, 14);
+    border-radius: 20px;
+    padding: 10px;
+    transition: all .3s;
+    
+  }
+
+  @media screen and (min-width: 1024px) {
+
+    .logo{
+      z-index: 30;
+    }
+
+    .icon{
+      display: none;
+    }
+
+    .nav-menu{
+      background-color: rgb(48, 56, 65);
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 80px;
+      padding: 0;
+      margin: 0;
+
+      .nav-a{
+        padding: 0px 1.3em;
+      }
+
+      .nav-item { 
+        display: inline-block;   
+      }
+      .nav-a:hover{
+        position: static;
+        background-color: rgb(58, 71, 80);
+        border: solid rgb(58, 71, 80) ;
+        color: rgb(246, 201, 14);
+        border-radius: 20px;
+        transition: all .3s;
+        padding: 0px 1.2em;
+        
+      }
+    } 
+  }
+  
+  @media screen and (min-width: 1440px) {
+
+    .logo{
+      z-index: 30;
+    }
+
+    .icon{
+      display: none;
+    }
+
+    .nav-menu{
+      background-color: rgb(48, 56, 65);
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 80px;
+      padding: 0;
+      margin: 0;
+
+      .nav-a{
+        display: inline-block;
+        padding: 0px 4rem;
+      }
+
+      .nav-item { 
+        display: flex;   
+      }
+      .nav-a:hover{
+        position: static;
+        background-color: rgb(58, 71, 80);
+        border: solid rgb(58, 71, 80) ;
+        color: rgb(246, 201, 14);
+        border-radius: 20px;
+        transition: all .3s;
+        padding: 0px 1.2em;
+        
+      }
+    } 
+  }
+}
+
+
+
+
+
+  
+
+
+
+
+
+
