@@ -18,7 +18,7 @@
     
       <nav class="navbar">
 
-        <a href="#" class="logo">logo</a>
+        <a href="index.html" class="logo"><img src="image/logo-essa.png" alt="logo essa"></a>
 
         <label for="btn" class="icon">
           <svg viewBox="0 0 100 80" width="40" height="40">
@@ -32,10 +32,10 @@
 
         <ul class="nav-menu">
           <li class="nav-item"><a class="nav-a" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-a" href="pages/tarifs.html">Tarifs</a></li>
-          <li class="nav-item"><a class="nav-a" href="pages/horraires.html">Horraires</a></li>
-          <li class="nav-item"><a class="nav-a" href="pages/planning.html">Planning des cours</a></li>
-          <li class="nav-item"><a class="nav-a" href="pages/plan.html">Le plan</a></li>
+          <li class="nav-item"><a class="nav-a" href="#tarifs">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-a" href="#horraires">Horraires</a></li>
+          <li class="nav-item"><a class="nav-a" href="#planning">Planning des cours</a></li>
+          <li class="nav-item"><a class="nav-a" href="#plan">Le plan</a></li>
           <li class="nav-item"><a class="nav-a" href="pages/contact.html">Nous contacter</a></li>
         </ul>
  
@@ -44,10 +44,13 @@
   </header>
 
   <main>
+<!-- Accueil -->
 
-    <h1>ESSA Fitness</h1>
+    <div class="title-page">
+      <h1>ESSA Fitness</h1>
+   </div>
 
-    <section>
+    <section class="presentation">
       <h2>Présentation</h2> 
       <p>Fitness ESSA a pour but d’offrir aux personnes de Saint Avé et des alentours, la possibilité de pratiquer les sports sous plusieurs formes : musculation, fitness, cardio, step, body barre, stretching, zumba, école d’haltérophilie et compétition.
       Les activités de Fitness ESSA sont dispensées au sein du complexe sportif David Vaillant à Saint-Avé. Une salle de musculation de près de 200 m² propose un équipement complet d’haltérophilie, de musculation et de cardio-training. Avec des appareils guidés et de nombreux bancs, une trentaine d’appareils de musculation est disponible. Les cours collectifs se déroulent dans les salles de gym 1 et 2.</p>
@@ -57,15 +60,277 @@
       <h2>Notre équipe</h2>
     </section>
 
-    <section>
+    <section class="salle">
       <h2>La salle</h2>
       <article>Zone cours collectifs</article>
       <article>Zone haltérophilie</article>
-      <article>Zone musculation</article>
+      <article class="musculation">Zone musculation
+        <img class="musculation-image"src="image/zone-muscu.jpg" alt="zone-musculation">
+      </article>
       <article>Zone force athlétique</article>
     </section>
     
+<!-- Début tarif -->
 
+    <div class="main-tarif">
+
+      <h2 id="tarifs" class="title-tarif">Nos tarifs</h2>
+
+      <div class="container un">
+        <div class="container-nom">Compétiteur JUNIOR</div>
+        <div class="container-prix">100€</div>
+        <div class="container-text">
+          <ul>
+            <li>Accès libre</li>
+            <li>Accompagnement par un coach</li>
+            <li>Et trouver autre chose</li>
+          </ul>
+        </div>
+        <div class="container-btn">
+        <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+        </div>
+      </div>
+
+      <div class="container deux">
+        <div class="container-nom">Compétiteur SENIOR</div>
+        <div class="container-prix">135€</div>
+        <div class="container-text">
+          <ul>
+            <li>Accès libre</li>
+            <li>Accompagnement par un coach</li>
+            <li>Et trouver autre chose</li>
+          </ul>
+        </div>
+        <div class="container-btn">
+        <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+        </div>
+      </div>
+
+      <div class="container trois">
+        <div class="container-nom">STANDART</div>
+        <div class="container-prix">180€</div>
+        <div class="container-text">
+          <ul>
+            <li>Accès libre</li>
+            <li>Accompagnement par un coach</li>
+            <li>Et trouver autre chose</li>
+          </ul>
+        </div>
+        <div class="container-btn">
+        <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+        </div>
+      </div>
+
+      <div class="container quatre">
+        <div class="container-nom">Offre spéciale</div>
+        <div class="container-prix">135€</div>
+        <div class="container-text">
+          <ul>
+            <li>Accès libre</li>
+            <li>Accompagnement par un coach</li>
+            <li>Et trouver autre chose</li>
+          </ul>
+        </div>
+        <div class="container-btn">
+        <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+        </div>
+      </div>
+    </div>
+
+<!-- Début horraires -->
+
+    <div class="main-horraires">
+      <h2 id="horraires">Horraire à l'année</h2>
+
+      <table class="table table-striped">
+        <tr>
+          <td scope="row">Lundi</td>
+          <td>9h30<br> 13h00</td>
+          <td>15h00<br> 20h30</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Mardi</td>
+          <td>9h30<br> 13h00</td>
+          <td>15h00<br> 20h30</td>
+        </tr>   
+
+        <tr>
+          <td scope="row">Mercredi</td>
+          <td>9h30<br> 13h00</td>
+          <td>15h00<br> 20h30</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Jeudi</td>
+          <td>9h30<br> 13h00</td>
+          <td>15h00<br> 20h30</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Vendredi</td>
+          <td>9h30<br> 13h00</td>
+          <td>15h00<br> 20h30</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Samedi</td>
+          <td>10h00<br> 12h00</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="main-horraires-vacances">
+
+      <h2>Horraire pendant les vacances scolaires</h2>
+      
+      <table class="table table-striped">
+        <tr>
+          <td scope="row">Lundi</td>
+          <td>9h30<br> 12h00</td>
+          <td>16h00<br> 20h00</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Mardi</td>
+          <td>9h30<br> 12h00</td>
+          <td>16h00<br> 20h00</td>
+        </tr>   
+
+        <tr>
+          <td scope="row">Mercredi</td>
+          <td>9h30<br> 12h00</td>
+          <td>16h00<br> 20h00</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Jeudi</td>
+          <td>9h30<br> 12h00</td>
+          <td>16h00<br> 20h00</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Vendredi</td>
+          <td>9h30<br> 12h00</td>
+          <td>16h00<br> 20h00</td>
+        </tr>
+
+        <tr>
+          <td scope="row">Samedi</td>
+          <td>10h00<br> 12h00</td>
+          <td></td>
+        </tr>
+      </table>
+
+    </div>
+
+<!-- Début planning 
+
+    <div class="main-planning">
+      <h2 id="planning">Cours collectifs</h2>
+      <table>
+        <tr>
+          <td></td>
+          <td>Lundi</td>
+          <td>Mardi</td>
+          <td>Mercredi</td>
+          <td>Jeudi</td>
+          <td>Vendredi</td>
+        </tr>
+      
+        <tr>
+          <td>10h</td>
+          <td>GYM TONIC</td>
+          <td>GYM TONIC</td>
+          <td></td>
+          <td>GYM TONIC</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+          <td>11h</td>
+          <td>PILATES</td>
+          <td>ZUMBA</td>
+          <td></td>
+          <td>STRETCH</td>
+          <td>ZUMBA</td>
+        </tr>
+
+        <tr>
+          <td>12h</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>17h30</td>
+          <td></td>
+          <td></td>
+          <td>BODY HIT</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>18h20</td>
+          <td></td>
+          <td></td>
+          <td>STEP</td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>18h30</td>
+          <td>FIT ATTACK</td>
+          <td>BODY BARRE</td>
+          <td></td>
+          <td>ZUMBA</td>
+          <td>PILATES</td>
+        </tr>
+
+        <tr>
+          <td>19h15</td>
+          <td></td>
+          <td></td>
+          <td>BODY SCULT</td>
+          <td></td>
+          <td>ABDOS / FESSIERS</td>
+        </tr>
+
+        <tr>
+          <td>20h30</td>
+          <td>EQUILIBRE CORPOREL</td>
+          <td>STRETCH</td>
+          <td></td>
+          <td>STRONG</td>
+          <td></td>
+        </tr>
+
+      </table>
+
+
+    </div>
+-->
+<!-- Début plan -->
+  
+    <div class="main-plan">
+      <p id="plan">1 Rue des Droits de l'Homme, 56890 Saint-Avé</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21489.00181259253!2d-2.733021284286492!3d47.68198794196069!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fd8d8af84fb6208!2sESSA%20Fitness!5e0!3m2!1sfr!2sfr!4v1653469482961!5m2!1sfr!2sfr" width="320" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
   </main>
 

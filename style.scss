@@ -8,20 +8,33 @@
 
 body { 
   background-color: rgb(238, 238, 238);
-}
+  
+  h2 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+  }
+
+
+/* BARRE DE NAVIAGTION */
 
 .navbar { 
-  background-color: rgb(48, 56, 65);
+  background-color: rgb(36,30,32);
+  padding: 0 20px ;
+  top: 0;
   height: 80px;
-  padding: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
 
   .logo { 
-    /*definir la taille du logo*/
-  
+    display: flex;
+    height: 60px;
+    max-width: 20px;
   }
 
   input { 
@@ -31,9 +44,10 @@ body {
   .nav-menu{
     display: none;
     position: absolute;
-    background-color: rgb(58, 71, 80);
+    background-color: rgb(39, 34, 35);
     list-style: none;
     text-align: end;
+    box-shadow: 0px 0px 100vw rgb(50, 50, 50);
     padding: 20px;
     right: 0;
     height: 100vh;
@@ -52,6 +66,7 @@ body {
   #btn:checked + ul{
     display: block;
     top: 80px;
+
     
   }
 
@@ -62,17 +77,12 @@ body {
   }
 
   .icon:hover{
-    
-    fill: rgb(246, 201, 14);
+    fill: rgb(247, 211, 64);
     transition: all .3s;
   }
 
   .nav-a:hover{
-    background-color: rgb(48, 56, 65);
-    border: solid rgb(48, 56, 65) ;
-    color: rgb(246, 201, 14);
-    border-radius: 20px;
-    padding: 10px;
+    color: rgb(247, 211, 64);
     transition: all .3s;
     
   }
@@ -88,7 +98,7 @@ body {
     }
 
     .nav-menu{
-      background-color: rgb(48, 56, 65);
+      background-color: rgb(36,30,32);
       display: flex;
       align-content: center;
       justify-content: center;
@@ -107,13 +117,8 @@ body {
       }
       .nav-a:hover{
         position: static;
-        background-color: rgb(58, 71, 80);
-        border: solid rgb(58, 71, 80) ;
-        color: rgb(246, 201, 14);
-        border-radius: 20px;
-        transition: all .3s;
-        padding: 0px 1.2em;
-        
+        color: rgb(247, 211, 64);
+        transition: all .3s; 
       }
     } 
   }
@@ -129,7 +134,7 @@ body {
     }
 
     .nav-menu{
-      background-color: rgb(48, 56, 65);
+      background-color: rgb(36,30,32);
       display: flex;
       align-content: center;
       justify-content: center;
@@ -149,26 +154,155 @@ body {
       }
       .nav-a:hover{
         position: static;
-        background-color: rgb(58, 71, 80);
-        border: solid rgb(58, 71, 80) ;
-        color: rgb(246, 201, 14);
-        border-radius: 20px;
+        color: rgb(247, 211, 64);
         transition: all .3s;
-        padding: 0px 1.2em;
         
       }
     } 
   }
 }
 
+/* ACCUEIL */
+
+.title-page{
+  display: flex;
+  background-size: 100vw;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 80px;
+  padding: 20px;
+  background-image: url(image/bg-page.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 { 
+  font-size: 6em;
+  text-align: center;
+  font-weight: bolder; 
+}
+
+.presentation{
+  background-color: white;
+  text-align: justify;
+  padding: 10px;
+}
+
+.salle{ 
+  background-color: white;
+}
+.musculation{
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  .musculation-image{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+  }
+}
 
 
+/* TARIFS */ 
 
+.main-tarif {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+  gap: 10px;
 
-  
+  .title-tarif { 
+    display: flex;
+    margin: 0;
+    padding: 30px;
+  }
 
+  .container { 
+    display: grid;
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
+    padding: 0; 
+    margin-bottom: 50px;
+    
 
+    .container-nom, .container-prix, .container-text, .container-btn, .btn-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+    }
 
+    .container-prix {
+      background-color: rgb(247, 211, 64);
+      }
+    
+      .btn-info {
+        background-color: rgb(238, 238, 238);
+        border: none;
+        height: 45%;
+        width: 60%;
 
+        a{
+          color: black;
+          text-decoration: none;
+        }
+      }
+      .btn-info:hover {
+        box-shadow: 3px 3px rgba(247, 210, 64, 0.284);
+        background-color: rgba(238, 238, 238, 0.783);;
+      }
+    }
+  }
 
+  @media screen and (min-width: 1024px) {
+    
+    .main-tarif{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 1fr 1fr;
+    }
 
+    .title-tarif{
+      display: grid;
+      grid-column-start: span 2;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+     
+    .main-tarif{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100px 1fr ;
+    }
+
+    .title-tarif{
+      display: grid;
+      grid-column-start: span 4;
+    }
+  }
+}
+
+/* HORRAIRES */
+
+.main-horraires{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.table-striped{
+  border: 1px solid black;
+}
