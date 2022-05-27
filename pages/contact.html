@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar">
 
-      <a href="#" class="logo">logo</a>
+      <a href="../index.html" class="logo"><img src="../image/logo-essa.png" alt="logo essa"></a>
 
       <label for="btn" class="icon">
         <svg viewBox="0 0 100 80" width="40" height="40">
@@ -31,53 +31,104 @@
 
       <ul class="nav-menu">
         <li class="nav-item"><a class="nav-a" href="../index.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-a" href="../index.html/#tarifs">Tarifs</a></li>
-        <li class="nav-item"><a class="nav-a" href="../index.html/horraires">Horraires</a></li>
-        <li class="nav-item"><a class="nav-a" href="../index.html/planning">Planning des cours</a></li>
-        <li class="nav-item"><a class="nav-a" href="../index.html/plan">Le plan</a></li>
-        <li class="nav-item"><a class="nav-a" href="../index.html">Nous contacter</a></li>
+        <li class="nav-item"><a class="nav-a" href="../index.html">Tarifs</a></li>
+        <li class="nav-item"><a class="nav-a" href="../index.html">Horraires</a></li>
+        <li class="nav-item"><a class="nav-a" href="../index.html">Planning des cours</a></li>
+        <li class="nav-item"><a class="nav-a" href="../index.html">Le plan</a></li>
+        <li class="nav-item"><a class="nav-a" href="contact.html">Nous contacter</a></li>
       </ul>
 
     </nav>
   </header>
-  <main>
-    <div>
+  <main class="main-contact">
 
-      <em>Cette fonctionaliser n'ai pas encore en fonction veuillez nous excuser pour la géne occasionée</em>
+    <em>Cette fonctionaliser n'ai pas encore en fonction veuillez nous excuser pour la géne occasionée</em>
 
+    <div class="formulaire">
       <form action="contact.php" method="post">
+
         <h2>Formulaire de contact</h2>
 
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" placeholder="Nom" name="nom" required>
+        <div class="container-nom">
+          <div class="nom">
+            <label for="nom">Nom</label>
+          </div>
+          <div class="input-nom">
+            <input type="text" id="nom" placeholder="Nom" name="nom" required>
+          </div>
+        </div>
 
-        <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" placeholder="Prénom" name="prenom" required>
+        <div class="container-prenom">
+          <div class="prenom">
+            <label for="prenom">Prénom</label>
+          </div>
+          <div class="input prenom">
+            <input type="text" id="prenom" placeholder="Prénom" name="prenom" required>
+          </div>
+        </div>
+        
+        <div class="">
+          <div class="">
+            <label for="email">Email</label>
+          </div>
+          <div class="">
+            <input type="email" id="email" placeholder="email@exemple.com" name="email" required>
+          </div>
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="email@exemple.com" name="email" required>
+        <div class="">
+          <div class="">
+            <label for="tel">Téléphone</label>
+          </div>
+          <div class="">
+            <input type="tel" id="tel" placeholder="06 00 00 00 00" name="tel">
+          </div>
+        </div>
 
-        <label for="tel">Numéro de téléphone</label>
-        <input type="tel" id="tel" placeholder="06 00 00 00 00" name="tel">
+        <div class="">
+          <div class="">
+            <label for="category">Catégorie du renseigenement</label>
+          </div>
+        </div>
+        <div class="">
+          <div class="">
+            <select name="category" id="category">
+              <option value="default">Inscription</option>
+              <option value="aide">Aide</option>
+              <option value="pro-contact">Contact professionnel</option>
+            </select>
+          </div>
+        </div>
 
-        <label for="category">Catégorie du renseigenement</label>
-        <select name="category" id="category">
-          <option value="default">Inscription</option>
-          <option value="aide">Aide</option>
-          <option value="pro-contact">Contact professionnel</option>
-        </select>
+        <div class="">
+          <div class="">
+            <label for="message">Votre message</label>
+          </div>
+        </div>
+        <div class="">
+          <div class="">
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          </div>
+        </div>
 
-        <label for="message">Votre message</label>
-        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <div class="">
+          <div class="">
+            <button class="btn btn-warning">Envoyer</button>
+          </div>
+        </div>
 
-        <button>Envoyer</button>
-
-        <div>
+        <div class="news">
           <p>Souhaitez-vous recevoir nos news ?</p>
-          <input type="radio" id="oui" name="news-question" value="oui" checked>
-          <label for="oui">Oui</label>
-          <input type="radio" id="non" name="news-question" value="non">
-          <label for="non">Non</label>
+          <div class="news-reponse">
+            <div class="reponse">
+              <input type="radio" id="oui" name="news-question" value="oui" checked>
+              <label for="oui">Oui</label>
+            </div>
+            <div class="reponse">
+              <input type="radio" id="non" name="news-question" value="non">
+              <label for="non">Non</label>
+            </div>
+          </div>
         </div>
 
       </form>

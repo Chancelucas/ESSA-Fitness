@@ -7,9 +7,6 @@
 
 body {
   background-color: rgb(238, 238, 238);
-  /* BARRE DE NAVIAGTION */
-  /* ACCUEIL */
-  /* TARIFS */
 }
 body h2 {
   display: flex;
@@ -18,7 +15,9 @@ body h2 {
   align-content: center;
   padding: 20px;
 }
-body .navbar {
+
+/* BARRE DE NAVIAGTION */
+.navbar {
   background-color: rgb(36, 30, 32);
   padding: 0 20px;
   top: 0;
@@ -28,58 +27,58 @@ body .navbar {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 30;
 }
-body .navbar .logo {
+.navbar .logo {
   display: flex;
   height: 60px;
   max-width: 20px;
 }
-body .navbar input {
+.navbar input {
   display: none;
 }
-body .navbar .nav-menu {
+.navbar .nav-menu {
   display: none;
   position: absolute;
   background-color: rgb(39, 34, 35);
   list-style: none;
   text-align: end;
-  box-shadow: 0px 0px 100vw rgb(50, 50, 50);
   padding: 20px;
   right: 0;
   height: 100vh;
   width: 240px;
 }
-body .navbar .nav-menu a {
+.navbar .nav-menu a {
   color: rgb(238, 238, 238);
   text-decoration: none;
   line-height: 3em;
   border: 30px;
   font-size: 16px;
 }
-body .navbar #btn:checked + ul {
+.navbar #btn:checked + ul {
   display: block;
   top: 80px;
 }
-body .navbar .icon {
+.navbar .icon {
   fill: rgb(238, 238, 238);
   cursor: pointer;
 }
-body .navbar .icon:hover {
+.navbar .icon:hover {
   fill: rgb(247, 211, 64);
   transition: all 0.3s;
 }
-body .navbar .nav-a:hover {
+.navbar .nav-a:hover {
   color: rgb(247, 211, 64);
   transition: all 0.3s;
 }
 @media screen and (min-width: 1024px) {
-  body .navbar .logo {
+  .navbar .logo {
     z-index: 30;
   }
-  body .navbar .icon {
+  .navbar .icon {
     display: none;
   }
-  body .navbar .nav-menu {
+  .navbar .nav-menu {
     background-color: rgb(36, 30, 32);
     display: flex;
     align-content: center;
@@ -90,26 +89,26 @@ body .navbar .nav-a:hover {
     padding: 0;
     margin: 0;
   }
-  body .navbar .nav-menu .nav-a {
+  .navbar .nav-menu .nav-a {
     padding: 0px 1.3em;
   }
-  body .navbar .nav-menu .nav-item {
+  .navbar .nav-menu .nav-item {
     display: inline-block;
   }
-  body .navbar .nav-menu .nav-a:hover {
+  .navbar .nav-menu .nav-a:hover {
     position: static;
     color: rgb(247, 211, 64);
     transition: all 0.3s;
   }
 }
 @media screen and (min-width: 1440px) {
-  body .navbar .logo {
+  .navbar .logo {
     z-index: 30;
   }
-  body .navbar .icon {
+  .navbar .icon {
     display: none;
   }
-  body .navbar .nav-menu {
+  .navbar .nav-menu {
     background-color: rgb(36, 30, 32);
     display: flex;
     align-content: center;
@@ -120,20 +119,32 @@ body .navbar .nav-a:hover {
     padding: 0;
     margin: 0;
   }
-  body .navbar .nav-menu .nav-a {
+  .navbar .nav-menu .nav-a {
     display: inline-block;
     padding: 0px 4rem;
   }
-  body .navbar .nav-menu .nav-item {
+  .navbar .nav-menu .nav-item {
     display: flex;
   }
-  body .navbar .nav-menu .nav-a:hover {
+  .navbar .nav-menu .nav-a:hover {
     position: static;
     color: rgb(247, 211, 64);
     transition: all 0.3s;
   }
 }
-body .title-page {
+
+.overlay-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.417);
+  display: none;
+}
+
+/* ACCUEIL */
+.title-page {
   display: flex;
   background-size: 100vw;
   justify-content: center;
@@ -146,47 +157,70 @@ body .title-page {
   background-position: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 50vh;
 }
-body h1 {
-  font-size: 6em;
+
+h1 {
+  font-size: 5em;
   text-align: center;
   font-weight: bolder;
 }
-body .presentation {
-  background-color: white;
-  text-align: justify;
-  padding: 10px;
-}
-body .salle {
-  background-color: white;
-}
-body .musculation {
+
+.presentation {
   display: flex;
-  margin: 10px;
+  background-color: white;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  text-align: justify;
 }
-body .musculation .musculation-image {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
+.presentation .text {
+  width: 80%;
+  max-width: 1440px;
 }
-body .main-tarif {
+.presentation .image-salle {
+  min-width: 320px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: auto;
+}
+.presentation .image-salle .photo-salle {
+  width: 100vw;
+  max-height: 50vh;
+}
+.presentation .image-salle .photo-muscu {
+  display: none;
+  width: 320px;
+}
+
+@media screen and (min-width: 425px) {
+  .image-salle .photo-salle {
+    max-width: 425px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 9em;
+  }
+
+  .image-salle {
+    padding-bottom: 20px;
+  }
+}
+/* TARIFS */
+.main-tarif {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 1fr 1fr 1fr;
   gap: 10px;
 }
-body .main-tarif .title-tarif {
+.main-tarif .title-tarif {
   display: flex;
   margin: 0;
   padding: 30px;
 }
-body .main-tarif .container {
+.main-tarif .container {
   display: grid;
   width: 300px;
   height: 450px;
@@ -196,61 +230,175 @@ body .main-tarif .container {
   padding: 0;
   margin-bottom: 50px;
 }
-body .main-tarif .container .container-nom, body .main-tarif .container .container-prix, body .main-tarif .container .container-text, body .main-tarif .container .container-btn, body .main-tarif .container .btn-info {
+.main-tarif .container .container-nom, .main-tarif .container .container-prix, .main-tarif .container .container-text, .main-tarif .container .container-btn, .main-tarif .container .btn-info {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
-body .main-tarif .container .container-prix {
+.main-tarif .container .container-prix {
   background-color: rgb(247, 211, 64);
 }
-body .main-tarif .container .btn-info {
+.main-tarif .container .btn-info {
   background-color: rgb(238, 238, 238);
   border: none;
   height: 45%;
   width: 60%;
 }
-body .main-tarif .container .btn-info a {
+.main-tarif .container .btn-info a {
   color: black;
   text-decoration: none;
 }
-body .main-tarif .container .btn-info:hover {
+.main-tarif .container .btn-info:hover {
   box-shadow: 3px 3px rgba(247, 210, 64, 0.284);
   background-color: rgba(238, 238, 238, 0.783);
 }
+
+.container-promo {
+  background-color: red;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  margin-top: -30px;
+  margin-left: 5px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
 @media screen and (min-width: 1024px) {
-  body .main-tarif {
+  .main-tarif {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr 1fr;
   }
-  body .title-tarif {
+
+  .title-tarif {
     display: grid;
     grid-column-start: span 2;
   }
 }
 @media screen and (min-width: 1440px) {
-  body .main-tarif {
+  .main-tarif {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 360px);
     grid-template-rows: 100px 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
-  body .title-tarif {
+
+  .title-tarif {
     display: grid;
     grid-column-start: span 4;
   }
 }
-
 /* HORRAIRES */
-.main-horraires {
+.main-horraires, .main-horraires-vacances {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  max-width: 1440px;
 }
 
 .table-striped {
   border: 1px solid black;
+  width: 80%;
+  max-width: 425px;
+  min-width: 320px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainHorraire {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mainHorraire {
+    display: grid;
+    grid-template-columns: 720px 720px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+}
+/* CONTACT */
+.main-contact {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.main-contact em {
+  text-align: center;
+}
+.main-contact .formulaire {
+  background-color: rgb(247, 211, 64);
+  margin: 30px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgba(93, 92, 92, 0.06);
+  max-width: 560px;
+}
+.main-contact .formulaire h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+.main-contact .formulaire .container-nom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main-contact .formulaire #nom, .main-contact .formulaire #prenom, .main-contact .formulaire #email, .main-contact .formulaire #tel, .main-contact .formulaire #category, .main-contact .formulaire #message {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 3px 3px rgba(93, 92, 92, 0.06);
+  margin: 5px 0px;
+  padding: 5px;
+  background-color: white;
+}
+.main-contact .formulaire .btn {
+  width: 100%;
+  border: white 5px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  background-color: white;
+  box-shadow: 3px 3px rgba(93, 92, 92, 0.06);
+}
+.main-contact .formulaire .btn:hover {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  -webkit-text-decoration: underline rgb(247, 211, 64) 3px;
+          text-decoration: underline rgb(247, 211, 64) 3px;
+}
+.main-contact .formulaire .news-reponse {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.main-contact .formulaire .news-reponse .reponse {
+  margin: 0px 20px;
 }/*# sourceMappingURL=style.css.map */

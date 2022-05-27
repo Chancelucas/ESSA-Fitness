@@ -17,7 +17,7 @@ body {
     padding: 20px;
   }
 
-
+}
 /* BARRE DE NAVIAGTION */
 
 .navbar { 
@@ -30,6 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  z-index: 30;
 
   .logo { 
     display: flex;
@@ -47,12 +48,10 @@ body {
     background-color: rgb(39, 34, 35);
     list-style: none;
     text-align: end;
-    box-shadow: 0px 0px 100vw rgb(50, 50, 50);
     padding: 20px;
     right: 0;
     height: 100vh;
     width: 240px;
-
 
     a{
       color: rgb(238, 238, 238) ;
@@ -66,8 +65,6 @@ body {
   #btn:checked + ul{
     display: block;
     top: 80px;
-
-    
   }
 
   .icon { 
@@ -162,6 +159,16 @@ body {
   }
 }
 
+.overlay-menu-mobile{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.417);
+  display: none;
+}
+
 /* ACCUEIL */
 
 .title-page{
@@ -177,36 +184,62 @@ body {
   background-position: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  height: 50vh;
 }
 h1 { 
-  font-size: 6em;
+  font-size: 5em;
   text-align: center;
   font-weight: bolder; 
 }
 
 .presentation{
-  background-color: white;
-  text-align: justify;
-  padding: 10px;
-}
-
-.salle{ 
-  background-color: white;
-}
-.musculation{
   display: flex;
-  margin: 10px;
+  background-color: white;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  text-align: justify;
+  
+  .text{
+    width: 80%;
+    max-width: 1440px;
+  }
 
-  .musculation-image{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
+  .image-salle{
+    min-width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: auto;
+
+    .photo-salle{
+      width: 100vw;
+      max-height: 50vh;
+    }
+
+    .photo-muscu{
+      display: none;
+      width: 320px;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .image-salle{
+    .photo-salle{
+      max-width: 425px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 { 
+    font-size: 9em;
+    
+  }
+
+  .image-salle{
+    padding-bottom: 20px;
   }
 }
 
@@ -265,6 +298,19 @@ h1 {
     }
   }
 
+  .container-promo{
+    background-color: red;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    margin-top: -30px;
+    margin-left: 5px;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
   @media screen and (min-width: 1024px) {
     
     .main-tarif{
@@ -283,8 +329,11 @@ h1 {
      
     .main-tarif{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 100px 1fr ;
+      grid-template-columns: repeat(4, 360px);
+      grid-template-rows: 100px 1fr;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
     }
 
     .title-tarif{
@@ -292,17 +341,126 @@ h1 {
       grid-column-start: span 4;
     }
   }
-}
 
 /* HORRAIRES */
 
-.main-horraires{
+.main-horraires, .main-horraires-vacances{
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  max-width: 1440px;
 }
+
 .table-striped{
   border: 1px solid black;
+  width: 80%;
+  max-width: 425px;
+  min-width: 320px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mainHorraire{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .mainHorraire{
+    display: grid;
+    grid-template-columns: 720px 720px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+  }
+}
+
+/* CONTACT */
+
+.main-contact {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  em{
+    text-align: center;
+  }
+  
+  .formulaire {
+    background-color: rgb(247, 211, 64);
+    margin: 30px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
+    max-width: 560px;
+
+    h2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      text-align: center;
+    }
+
+    .container-nom {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    #nom, #prenom, #email, #tel, #category, #message{
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
+      margin: 5px 0px;
+      padding: 5px;
+      background-color: white;
+    }
+  
+    .btn{
+      width: 100%;
+      border: white 5px;
+      border-radius: 5px;
+      margin: 10px 0px;
+      background-color: white;
+      box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
+    }
+
+    .btn:hover{
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      text-decoration: underline rgb(247, 211, 64) 3px ;
+    }
+
+    .news-reponse{
+      display: flex;
+      width: 100%;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      .reponse{
+        margin: 0px 20px;
+      }
+
+    }
+
+  }
 }

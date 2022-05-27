@@ -13,7 +13,7 @@
   <title>ESSA Fitness</title>
 </head>
 <body>
-
+<div class="overlay-menu-mobile"></div>
   <header>
     
       <nav class="navbar">
@@ -22,9 +22,9 @@
 
         <label for="btn" class="icon">
           <svg viewBox="0 0 100 80" width="40" height="40">
-            <rect width="100" height="15" rx="10" ry="10"></rect>
-            <rect y="35" width="100" height="15" rx="10" ry="10"></rect>
-            <rect y="70" width="100" height="15" rx="10" ry="10"></rect> 
+            <rect width="100" height="10" rx="10" ry="5"></rect>
+            <rect y="35" width="100" height="10" rx="10" ry="5"></rect>
+            <rect y="70" width="100" height="10" rx="10" ry="5"></rect> 
           </svg>
         </label>
 
@@ -47,34 +47,26 @@
 <!-- Accueil -->
 
     <div class="title-page">
-      <h1>ESSA Fitness</h1>
+      <h1>ESSA<br>Fitness</h1>
    </div>
 
     <section class="presentation">
       <h2>Présentation</h2> 
-      <p>Fitness ESSA a pour but d’offrir aux personnes de Saint Avé et des alentours, la possibilité de pratiquer les sports sous plusieurs formes : musculation, fitness, cardio, step, body barre, stretching, zumba, école d’haltérophilie et compétition.
-      Les activités de Fitness ESSA sont dispensées au sein du complexe sportif David Vaillant à Saint-Avé. Une salle de musculation de près de 200 m² propose un équipement complet d’haltérophilie, de musculation et de cardio-training. Avec des appareils guidés et de nombreux bancs, une trentaine d’appareils de musculation est disponible. Les cours collectifs se déroulent dans les salles de gym 1 et 2.</p>
+      <p class="text">Fitness ESSA a pour but d’offrir aux personnes de Saint Avé et des alentours, la possibilité de pratiquer les sports sous plusieurs formes : musculation, fitness, cardio, step, body barre, stretching, zumba, école d’haltérophilie et compétition. Les activités de Fitness ESSA sont dispensées au sein du complexe sportif David Vaillant à Saint-Avé. Une salle de musculation de près de 200 m² propose un équipement complet d’haltérophilie, de musculation et de cardio-training. Avec des appareils guidés et de nombreux bancs, une trentaine d’appareils de musculation est disponible. Les cours collectifs se déroulent dans les salles de gym 1 et 2.</p>
+      <div class="image-salle">
+        <img class="photo-salle" src="image/salle.jpg" alt="">
+        <img class="photo-muscu" src="image/zone-muscu.jpg" alt="">
+      </div>
+  
     </section>
 
-    <section>
-      <h2>Notre équipe</h2>
-    </section>
-
-    <section class="salle">
-      <h2>La salle</h2>
-      <article>Zone cours collectifs</article>
-      <article>Zone haltérophilie</article>
-      <article class="musculation">Zone musculation
-        <img class="musculation-image"src="image/zone-muscu.jpg" alt="zone-musculation">
-      </article>
-      <article>Zone force athlétique</article>
-    </section>
+      
     
 <!-- Début tarif -->
 
-    <div class="main-tarif">
+    <div id="tarifs" class="main-tarif">
 
-      <h2 id="tarifs" class="title-tarif">Nos tarifs</h2>
+      <h2  class="title-tarif">Nos tarifs</h2>
 
       <div class="container un">
         <div class="container-nom">Compétiteur JUNIOR</div>
@@ -122,6 +114,7 @@
       </div>
 
       <div class="container quatre">
+        <div class="container-promo"> Jusqu'au 30 septembre</div>
         <div class="container-nom">Offre spéciale</div>
         <div class="container-prix">135€</div>
         <div class="container-text">
@@ -138,91 +131,91 @@
     </div>
 
 <!-- Début horraires -->
+    <div class="mainHorraire">
+      <div class="main-horraires">
+        <h2 id="horraires"  class="title-horraire" >Horraire à l'année</h2>
 
-    <div class="main-horraires">
-      <h2 id="horraires">Horraire à l'année</h2>
+        <table class="table table-striped normal">
+          <tr>
+            <td scope="row">Lundi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
 
-      <table class="table table-striped">
-        <tr>
-          <td scope="row">Lundi</td>
-          <td>9h30<br> 13h00</td>
-          <td>15h00<br> 20h30</td>
-        </tr>
+          <tr>
+            <td scope="row">Mardi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>   
 
-        <tr>
-          <td scope="row">Mardi</td>
-          <td>9h30<br> 13h00</td>
-          <td>15h00<br> 20h30</td>
-        </tr>   
+          <tr>
+            <td scope="row">Mercredi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Mercredi</td>
-          <td>9h30<br> 13h00</td>
-          <td>15h00<br> 20h30</td>
-        </tr>
+          <tr>
+            <td scope="row">Jeudi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Jeudi</td>
-          <td>9h30<br> 13h00</td>
-          <td>15h00<br> 20h30</td>
-        </tr>
+          <tr>
+            <td scope="row">Vendredi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Vendredi</td>
-          <td>9h30<br> 13h00</td>
-          <td>15h00<br> 20h30</td>
-        </tr>
+          <tr>
+            <td scope="row">Samedi</td>
+            <td>10h00<br> 12h00</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
 
-        <tr>
-          <td scope="row">Samedi</td>
-          <td>10h00<br> 12h00</td>
-          <td></td>
-        </tr>
-      </table>
-    </div>
+      <div class="main-horraires-vacances">
 
-    <div class="main-horraires-vacances">
+        <h2 class="title-vacances">Horraire vacances scolaires</h2>
+        
+        <table class="table table-striped vacances">
+          <tr>
+            <td scope="row">Lundi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
 
-      <h2>Horraire pendant les vacances scolaires</h2>
-      
-      <table class="table table-striped">
-        <tr>
-          <td scope="row">Lundi</td>
-          <td>9h30<br> 12h00</td>
-          <td>16h00<br> 20h00</td>
-        </tr>
+          <tr>
+            <td scope="row">Mardi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>   
 
-        <tr>
-          <td scope="row">Mardi</td>
-          <td>9h30<br> 12h00</td>
-          <td>16h00<br> 20h00</td>
-        </tr>   
+          <tr>
+            <td scope="row">Mercredi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Mercredi</td>
-          <td>9h30<br> 12h00</td>
-          <td>16h00<br> 20h00</td>
-        </tr>
+          <tr>
+            <td scope="row">Jeudi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Jeudi</td>
-          <td>9h30<br> 12h00</td>
-          <td>16h00<br> 20h00</td>
-        </tr>
+          <tr>
+            <td scope="row">Vendredi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
 
-        <tr>
-          <td scope="row">Vendredi</td>
-          <td>9h30<br> 12h00</td>
-          <td>16h00<br> 20h00</td>
-        </tr>
-
-        <tr>
-          <td scope="row">Samedi</td>
-          <td>10h00<br> 12h00</td>
-          <td></td>
-        </tr>
-      </table>
-
+          <tr>
+            <td scope="row">Samedi</td>
+            <td>10h00<br> 12h00</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
     </div>
 
 <!-- Début planning 
