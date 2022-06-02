@@ -168,7 +168,6 @@ h1 {
 
 .presentation {
   display: flex;
-  background-color: white;
   flex-direction: column;
   align-content: center;
   justify-content: center;
@@ -201,7 +200,16 @@ h1 {
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 9em;
+    font-size: 6em;
+  }
+
+  .image-salle {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  h1 {
+    font-size: 13em;
   }
 
   .image-salle {
@@ -219,6 +227,9 @@ h1 {
   display: flex;
   margin: 0;
   padding: 30px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 .main-tarif .container {
   display: grid;
@@ -301,15 +312,13 @@ h1 {
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: white;
   max-width: 1440px;
 }
 
 .table-striped {
   border: 1px solid black;
-  width: 80%;
+  width: 90%;
   max-width: 425px;
-  min-width: 320px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -319,7 +328,6 @@ h1 {
     align-content: center;
     justify-content: center;
     align-items: center;
-    background-color: white;
     padding: 20px;
   }
 }
@@ -330,7 +338,6 @@ h1 {
     align-content: center;
     justify-content: center;
     align-items: center;
-    background-color: white;
     padding: 20px;
   }
 }
@@ -344,7 +351,7 @@ h1 {
   flex-direction: column;
 }
 .main-planning .planning {
-  display: block;
+  display: flex;
   text-align: center;
   padding: 10px;
   width: 100vw;
@@ -352,6 +359,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  flex-direction: column;
 }
 .main-planning .jour {
   display: grid;
@@ -362,6 +370,7 @@ h1 {
   box-shadow: 3px 3px rgba(93, 92, 92, 0.06);
   background-color: white;
   width: 100%;
+  max-width: 768px;
   height: 100%;
   margin: 5px 0px;
   font-size: 14px;
@@ -381,7 +390,13 @@ h1 {
 
 /* PLAN */
 .main-plan {
-  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.main-plan .image {
+  width: 80%;
+  max-width: 1440px;
+  box-shadow: 3px 3px rgba(93, 92, 92, 0.06);
 }
 
 /* CONTACT */
@@ -451,4 +466,62 @@ h1 {
 }
 .main-contact .formulaire .news-reponse .reponse {
   margin: 0px 20px;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(36, 30, 32);
+  padding: 0 20px;
+  height: 160px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding-top: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-main {
+  max-width: 768px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-main img {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%);
+}
+.footer-main p {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    max-width: 768px;
+    max-height: 80px;
+  }
+  .footer-main .num-portable .email-contact .adresse-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .footer-main a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+  }
+  .footer-main p {
+    display: initial;
+    color: white;
+  }
 }/*# sourceMappingURL=style.css.map */
