@@ -171,6 +171,7 @@ body {
 
 /* ACCUEIL */
 
+
 .title-page{
   display: flex;
   background-size: 100vw;
@@ -178,19 +179,33 @@ body {
   align-items: center;
   align-content: center;
   margin-top: 80px;
-  padding: 20px;
   background-image: url(image/bg-page.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  height: 50vh;
+  flex-direction: column
 }
 
 h1 { 
+  display: flex;
+  height: 50vh;
   font-size: 5em;
   text-align: center;
-  font-weight: bolder; 
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.bg-salle{
+  display: block;
+  width: 100vw;
+  filter: grayscale(60%);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.052);
+  margin-top: 5px;
+  
 }
 
 .presentation{
@@ -206,23 +221,46 @@ h1 {
     max-width: 1440px;
   }
 
-  .image-salle{
-    min-width: 320px;
-    margin: 0 auto;
-    margin-top: 20px;
-    height: auto;
+  .slider{
+    display: flex;
+    padding: 20px 0px;
+    margin-bottom: 40px;
+    width: 100vw;
+  }
 
-    .photo-salle{
-      width: 100vw;
-      max-height: 50vh;
-    }
+  .slides{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 100vw;
+    justify-content: space-around
+  }
 
-    .photo-muscu{
-      display: none;
-      width: 320px;
+  img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.183);
+  }
+
+  .deux{
+    img{
+      position: absolute;
+      object-position: 0px -40px;
+      height: 130px;
+      width: 130px;
+      top: 0;
+      left: 30%;
     }
   }
 }
+
+
+
 
 @media screen and (min-width: 425px) {
   .image-salle{
@@ -259,19 +297,9 @@ h1 {
 .main-tarif {
   display: grid;
   grid-template-columns: 1fr ;
-  grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
-  
-
-  .title-tarif { 
-    display: flex;
-    margin: 0;
-    padding: 30px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-  }
-
+ 
   .container { 
     display: grid;
     width: 250px;
@@ -282,7 +310,6 @@ h1 {
     padding: 0; 
     margin-bottom: 50px;
     
-
     .container-nom, .container-prix, .container-text, .container-btn, .btn-info {
       display: flex;
       align-items: center;
