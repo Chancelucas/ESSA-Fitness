@@ -1,3 +1,11 @@
+/* Jaune : rgb(247, 211, 64)
+  Marron : 
+  Rouge : rgb(255,87,87)
+  Bleu : rgb(73,77,148)
+*/
+
+
+
 * {
   padding: 0;
   margin: 0;
@@ -143,7 +151,7 @@ body {
 
       .nav-a{
         display: inline-block;
-        padding: 0px 4rem;
+        padding: 0px 3rem;
       }
 
       .nav-item { 
@@ -199,13 +207,24 @@ h1 {
   align-content: center;
 }
 
+.photo-bg{
+  display: flex;
+}
+
 .bg-salle{
-  display: block;
   width: 100vw;
   filter: grayscale(60%);
   box-shadow: 5px 5px rgba(0, 0, 0, 0.052);
   margin-top: 5px;
-  
+  max-width: 375px;
+}
+.bg-muscu, .bg-machine{
+  display: none;
+  width: 100vw;
+  filter: grayscale(60%);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.052);
+  margin-top: 5px;
+  max-width: 375px;
 }
 
 .presentation{
@@ -223,20 +242,21 @@ h1 {
 
   .slider{
     display: flex;
-    padding: 20px 0px;
-    margin-bottom: 40px;
+    margin: 10px 0px;
     width: 100vw;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .slides{
     display: flex;
-    display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
-    position: relative;
+    height: 30vh;
     width: 100vw;
-    justify-content: space-around
   }
 
   img{
@@ -245,22 +265,21 @@ h1 {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.183);
+    top: 20px;
+    
   }
 
   .deux{
     img{
-      position: absolute;
       object-position: 0px -40px;
-      height: 130px;
-      width: 130px;
-      top: 0;
-      left: 30%;
+      height: 110px;
+      width: 110px;
+      top: 0px;
+      left: 30vw;
+      z-index: 10;
     }
   }
 }
-
-
-
 
 @media screen and (min-width: 425px) {
   .image-salle{
@@ -277,38 +296,114 @@ h1 {
 
   .image-salle{
     padding-bottom: 20px;
+  }
 
+  .bg-muscu{
+    display: initial;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  h1 { 
+    font-size: 8em;
+  }
+  .presentation{
+    img{
+      height: 140px;
+      width: 140px;
+    }
+
+    .deux{
+      img{
+        height: 150px;
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bg-machine{
+    display: initial;
+  }
+  
+  .presentation{
+    img{
+      height: 210px;
+      width: 210px;
+    }
+
+    .deux{
+      img{
+        height: 220px;
+        width: 220px;
+      }
+    }
   }
 }
 
 @media screen and (min-width: 2560px) {
-  h1 { 
-    font-size: 13em;
-  }
   .image-salle{
     padding-bottom: 20px;
   }
 }
 
-
-
 /* TARIFS */ 
 
 .main-tarif {
-  display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px;
- 
+  width: 250px;
+  overflow: hidden;
+  margin: 10px auto;
+
+  .slidePrix{
+    width: calc(250px * 4);
+    animation: glisse 15s infinite;
+  }
+
+
+
+ @keyframes glisse {
+    0% {
+     transform: translateX(0);
+    }
+    13% {
+      transform: translateX(0);
+     }
+    25% {
+      transform: translateX(-250px);
+    }
+    37% {
+      transform: translateX(-250px);
+    }
+    50% {
+      transform: translateX(-500px);
+    }
+    63% {
+      transform: translateX(-500px);
+    }
+    76% {
+      transform: translateX(-750px);
+    }
+    90% {
+      transform: translateX(-750px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
   .container { 
+    float: left;
     display: grid;
     width: 250px;
+    border-radius: 5px;
     height: 450px;
     background-color: white;
-    border-radius: 10px;
     box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
     padding: 0; 
     margin-bottom: 50px;
+    min-width: 250px;
     
     .container-nom, .container-prix, .container-text, .container-btn, .btn-info {
       display: flex;
@@ -334,52 +429,44 @@ h1 {
       }
       .btn-info:hover {
         box-shadow: 3px 3px rgba(247, 210, 64, 0.284);
-        background-color: rgba(238, 238, 238, 0.783);;
+        background-color: rgba(238, 238, 238, 0.783);
       }
     }
   }
 
-  .container-promo{
-    background-color: red;
-    position: absolute;
-    display: flex;
-    text-align: center;
-    font-size: 12px;
-    padding: 10px;
-    margin-top: -30px;
-    margin-left: 5px;
-    border-radius: 10px;
-    z-index: -1;
-  }
-
   @media screen and (min-width: 768px) {
     
-    .main-tarif{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px 1fr 1fr;
-    }
+    .main-tarif{  
+      width: 100vw;
+      display: flex;
+      float: none;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
 
-    .title-tarif{
-      display: grid;
-      grid-column-start: span 2;
+      .slidePrix{
+        display: grid;
+        animation: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
     }
   }
 
   @media screen and (min-width: 1440px) {
      
-    .main-tarif{
-      display: grid;
-      grid-template-columns: repeat(4, 360px);
-      grid-template-rows: 100px 1fr;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
+   .main-tarif{ 
+
+      .slidePrix{
+        display: flex;
+      }
     }
 
-    .title-tarif{
-      display: grid;
-      grid-column-start: span 4;
+    .container{
+      margin: auto 50px;
     }
   }
 
@@ -476,8 +563,6 @@ h1 {
   }
 }
 
-
-
 /* PLAN */
 
 .main-plan{
@@ -490,6 +575,75 @@ h1 {
     box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
   }
 }
+
+/* EVENEMENT */
+
+.main-event{
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  width: 100vw;
+  
+
+  .event{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 3fr ;
+    background-color: white;
+    margin: 10px auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px rgba(93, 92, 92, 0.060);
+    width: 100vw;
+
+    aside{
+      display: flex;
+      background-color: rgb(247, 211, 64);
+      height: 100%;
+      border-radius: 0px 5px 0px 0px;
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .competition{
+    display: flex;
+    grid-row-end: span 2;
+    border-right: solid 1px rgb(247, 211, 64);
+    height: 100%;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+  }
+  .lieu{
+    text-decoration: none;
+    color: black;
+  }
+  
+}
+
+@media screen and (min-width: 768px) { 
+
+  .main-event{
+    justify-content: center;
+    justify-items: center;
+
+    .event{
+      max-width: 768px;
+      
+    }
+  }
+}
+
+
 
 /* CONTACT */
 
@@ -571,7 +725,6 @@ h1 {
   }
 }
 
-
 /* FOOTER */
 
 footer{
@@ -634,7 +787,5 @@ footer{
       color: white;
 
     }
-
-
   }
 }
