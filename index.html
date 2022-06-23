@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Prompt&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>ESSA Fitness</title>
+</head>
+<body>
+<div class="overlay-menu-mobile"></div>
+  <header>
+    
+      <nav class="navbar">
+
+        <a href="index.html" class="logo"><img src="image/logo-essa.png" alt="logo essa"></a>
+
+        <label for="btn" class="icon">
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="10" rx="10" ry="5"></rect>
+            <rect y="35" width="100" height="10" rx="10" ry="5"></rect>
+            <rect y="70" width="100" height="10" rx="10" ry="5"></rect> 
+          </svg>
+        </label>
+
+        <input type="checkbox" id="btn">
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-a" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-a" href="#tarifs">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-a" href="#horraires">Horaires</a></li>
+          <li class="nav-item"><a class="nav-a" href="#planning">Planning des cours</a></li>
+          <li class="nav-item"><a class="nav-a" href="#plan">Le plan</a></li>
+          <li class="nav-item"><a class="nav-a" href="pages/event.html">Evenements</a></li>
+          <li class="nav-item"><a class="nav-a" href="pages/contact.html">Nous contacter</a></li>
+        </ul>
+ 
+      </nav>
+     
+  </header>
+
+  <main>
+<!-- Accueil -->
+
+    <div class="title-page">
+      <div class="photo-bg">
+        <img class="bg-salle" src="image/salle.jpg" alt="salle">
+        <img class="bg-muscu" src="image/zone-muscu.jpg" alt="muscu">
+        <img class="bg-machine" src="image/musculation.jpeg" alt="machine">
+      </div>
+      <h1>ESSA <br>Fitness</h1>
+   </div>
+
+    <section class="presentation">
+      <p class="text">Fitness ESSA a pour but d’offrir aux personnes de Saint Avé et des alentours, la possibilité de pratiquer les sports sous plusieurs formes : musculation, fitness, cardio, step, body barre, stretching, zumba, école d’haltérophilie et compétition. Les activités de Fitness ESSA sont dispensées au    sein du complexe sportif David Vaillant à Saint-Avé. Une salle de musculation de près de 200 m² propose un équipement complet d’haltérophilie, de musculation et de cardio-training. Avec des appareils guidés et de nombreux bancs, une trentaine d’appareils de musculation est disponible. Les cours collectifs se déroulent dans les salles de gym 1 et 2.</p>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide un"><img src="image/photo-comp1.jpg" alt="1"></div>
+          <div class="slide deux"><img src="image/photo-win.jpg" alt="2"></div>
+          <div class="slide trois"><img src="image/photo-comp2.jpg" alt="3"></div>
+        </div>
+      </div>
+  
+    </section>
+   
+<!-- Début tarif -->
+
+    <div id="tarifs" class="main-tarif">
+      <div class="slidePrix">
+        <div class="container un">
+          <div class="container-nom">Compétiteur JUNIOR</div>
+          <div class="container-prix">100€</div>
+          <div class="container-text">
+            <ul>
+              <li>Accès libre</li>
+              <li>Accompagnement par un coach</li>
+              <li>Et trouver autre chose</li>
+            </ul>
+          </div>
+          <div class="container-btn">
+          <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+          </div>
+        </div>
+
+        <div class="container deux">
+          <div class="container-nom">Compétiteur SENIOR</div>
+          <div class="container-prix">135€</div>
+          <div class="container-text">
+            <ul>
+              <li>Accès libre</li>
+              <li>Accompagnement par un coach</li>
+              <li>Et trouver autre chose</li>
+            </ul>
+          </div>
+          <div class="container-btn">
+          <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+          </div>
+        </div>
+
+        <div class="container trois">
+          <div class="container-nom">STANDART</div>
+          <div class="container-prix">180€</div>
+          <div class="container-text">
+            <ul>
+              <li>Accès libre</li>
+              <li>Accompagnement par un coach</li>
+              <li>Et trouver autre chose</li>
+            </ul>
+          </div>
+          <div class="container-btn">
+          <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+          </div>
+        </div>
+
+        <div class="container quatre">
+          <div class="container-nom">Offre spéciale</div>
+          <div class="container-prix">135€</div>
+          <div class="container-text">
+            <ul>
+              <li>Accès libre</li>
+              <li>Accompagnement par un coach</li>
+              <li>Et trouver autre chose</li>
+            </ul>
+          </div>
+          <div class="container-btn">
+          <button class="btn btn-info btn-warning btn-block "><a href="pages/contact.html">Plus d'infos</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Début horraires -->
+    <div class="mainHorraire">
+      <div class="main-horraires">
+        <h2 id="horraires"  class="title-horraire" >Horaires à l'année</h2>
+
+        <table class="table table-striped normal">
+          <tr>
+            <td scope="row">Lundi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Mardi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>   
+
+          <tr>
+            <td scope="row">Mercredi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Jeudi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Vendredi</td>
+            <td>9h30<br> 13h00</td>
+            <td>15h00<br> 20h30</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Samedi</td>
+            <td>10h00<br> 12h00</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="main-horraires-vacances">
+
+        <h2 class="title-vacances">Horaires vacances scolaires</h2>
+        
+        <table class="table table-striped vacances">
+          <tr>
+            <td scope="row">Lundi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Mardi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>   
+
+          <tr>
+            <td scope="row">Mercredi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Jeudi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Vendredi</td>
+            <td>9h30<br> 12h00</td>
+            <td>16h00<br> 20h00</td>
+          </tr>
+
+          <tr>
+            <td scope="row">Samedi</td>
+            <td>10h00<br> 12h00</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+<!-- Début planning -->
+
+<div id="planning" class="main-planning">
+
+  <div class="planning">
+    <p>Lundi</p>
+    <div class="jour">
+      <span class="heure">10h</span>
+      <span class="cours">Gym tonic</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">11h</span>
+      <span class="cours">Pilates</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">18h30</span>
+      <span class="cours">Fit attack</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Stéphane</span>
+    </div>
+    <div class="jour">
+      <span class="heure">20h30</span>
+      <span class="cours">Equilibre corporel</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Stéphane</span>
+    </div>
+  </div>
+
+  <div class="planning">
+    <p>Mardi</p>
+    <div class="jour">
+      <span class="heure">10h</span>
+      <span class="cours">Gym tonic</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Edouard</span>
+    </div>
+    <div class="jour">
+      <span class="heure">11h</span>
+      <span class="cours">Pilates</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Edouard</span>
+    </div>
+    <div class="jour">
+      <span class="heure">18h30</span>
+      <span class="cours">Body barre</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Stéphane</span>
+    </div>
+    <div class="jour">
+      <span class="heure">20h30</span>
+      <span class="cours">Strech</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Stéphane</span>
+    </div>
+  </div>
+  
+  <div class="planning">
+    <p>Mercredi</p>
+    <div class="jour">
+      <span class="heure">17h30</span>
+      <span class="cours">Body hit</span>
+      <span class="duree">45 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">18h20</span>
+      <span class="cours">Step</span>
+      <span class="duree">45 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">19h15</span>
+      <span class="cours">Body scult</span>
+      <span class="duree">45 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+  </div>
+
+  <div class="planning">
+    <p>Jeudi</p>
+    <div class="jour">
+      <span class="heure">10h</span>
+      <span class="cours">Gym tonic</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">11h</span>
+      <span class="cours">Stretch</span>
+      <span class="duree">45 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">18h30</span>
+      <span class="cours">zumba</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Stéphane</span>
+    </div>
+    <div class="jour">
+      <span class="heure">20h30</span>
+      <span class="cours">Strong</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Edouard</span>
+    </div>
+  </div>
+
+  <div class="planning">
+    <p>Vendredi</p>
+    <div class="jour">
+      <span class="heure">11h</span>
+      <span class="cours">Zumba</span>
+      <span class="duree">50 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">11h</span>
+      <span class="cours">Pilats</span>
+      <span class="duree">45 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+    <div class="jour">
+      <span class="heure">18h30</span>
+      <span class="cours">Abdos Fessiers</span>
+      <span class="duree">40 mins</span>
+      <span class="qui ">Ingrid</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Début plan -->
+  
+    <div id="plan" class="main-plan">
+      <iframe class="image" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21489.00181259253!2d-2.733021284286492!3d47.68198794196069!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4fd8d8af84fb6208!2sESSA%20Fitness!5e0!3m2!1sfr!2sfr!4v1653469482961!5m2!1sfr!2sfr" width="320" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <span class="num-portable">
+        <a href="tel:+33689615284"><img src="image/picto-tel.svg" alt="telephone"><p>+33 6 89 61 52 84</p></a>
+        
+      </span>
+
+      <span class="email-contact">
+        <a href="mailto:fitness56890@gmail.com"><img src="image/picto-mail.svg" alt="mail"><p>fitness56890@gmail.com</p></a>
+        
+      </span>
+
+      <span class="adresse-contact">
+        <a href="https://www.google.com/maps/dir//ESSA+Fitness+1+Rue+des+Droits+de+l'Homme+56890+Saint-Av%C3%A9/@47.6918007,-2.743791,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48101facabbaf68d:0x4fd8d8af84fb6208!2m2!1d-2.743791!2d47.6918007"  _blank><img src="image/picto-map.svg" alt="plan"><p>ESSA Fitness, 1 Rue des Droits de l'Homme, 56890 Saint-Avé</p></a>
+        
+      </span>
+    </div>
+  </footer>
+</body>
+</html> 
